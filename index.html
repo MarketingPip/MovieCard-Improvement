@@ -1,26 +1,16 @@
 
-<script type="text/javascript>
-              
- 
-function ShowNotification(icon, text) {
-    
-		
-  var x = document.getElementById("Notification_1");
- 
-  
-  x.innerHTML =  `<div class="checkicon"> <i class="${icon}"></i> </div>${text}`
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);	
-	
-  
-}
-                                                                     </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
    *, *:before, *:after {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   box-sizing: border-box;
+}
+
+html,body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
 }
 html {
   overflow: hidden;
@@ -261,3 +251,21 @@ section:target h1 {
 
 <div id="Notification_1">
   </div>
+
+
+<script type="text/javascript">
+              
+ 
+function ShowNotification(icon, text) {
+    
+		
+  var x = document.getElementById("Notification_1");
+ 
+  
+  x.innerHTML =  `<div class="checkicon"> <i class="${icon}"></i> </div>${text}`
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);	
+	
+  
+}
+                                                                     </script>
