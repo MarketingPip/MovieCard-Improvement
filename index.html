@@ -1,15 +1,5 @@
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
 
-html,body {
-    margin:0;
-    padding:0;
-    overflow-x:hidden;
-	  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  box-sizing: border-box;
-}
 html {
   overflow: hidden;
   height: 100%;
@@ -21,6 +11,9 @@ body {
   overflow: hidden;
 }
 .header {
+     font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  box-sizing: border-box;
   height: 100%;
   padding: 5px 150px;
   box-shadow: 0px -16px 43px 21px rgba(0, 0, 0, 0.6);
@@ -28,15 +21,20 @@ body {
   background-size: cover;
   overflow: hidden;
 }
+   
+@media(max-width: 768px){.header{position: relative;     
+}} 
+   
 .header .details {
-  padding: 25px 0;
-  width: 45%;
+  padding: 35px 0;
+  width: 400px;
 }
 .header .details .rating {
   display: inline-block;
   font-size: 22px;
   color: #ea292e;
 }
+
 .header .details .year, .header .details .seasons {
   padding: 0 0 0 20px;
   display: inline-block;
@@ -44,15 +42,26 @@ body {
   color: rgba(255, 255, 255, 0.9);
 }
 .header .details .description {
-  padding: 25px 0 0 0;
-  font-size: 15px;
-  line-height: 26px;
-  color: rgba(255, 255, 255, 0.95);
+    width: 442px;
+    resize: none;
+    padding: 25px 0 0 0;
+    font-size: 1.1em;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.95);
 }
+
+   @media(max-width: 768px){.header .details .description{position: relative; 
+top:300x;
+width: 450px;      
+}} 
+   
 .header .details .button {
   margin: 25px 20px 0 0;
 }
 .button {
+     font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  box-sizing: border-box;
   display: inline-block;
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
@@ -60,10 +69,17 @@ body {
   font-weight: 400;
   padding: 13px 35px;
   border-radius: 7px;
+   
 }
 .button.red {
   background: rgba(230, 45, 53, 0.5);
+   width:127px;
 }
+   
+   @media(max-width: 768px){.button.red{position: absolute; 
+top:300x;      
+left: 145px;}} 
+   
 .button.red:hover {
   background: rgba(230, 45, 53, 0.75);
 }
@@ -72,7 +88,12 @@ body {
 }
 .button.plain {
   background: rgba(255, 255, 255, 0.15);
+   width:160px;
 }
+   
+ @media(max-width: 768px){.button.plain{position: absolute; 
+top:300x;      
+left: 300px;}}    
 .button.plain:hover {
   background: rgba(255, 255, 255, 0.3);
 }
@@ -85,8 +106,8 @@ img {
   border-style: none;
   height: 87px;
   width: 378px;
-  top: 3%;
-  right: 10%;
+  top: 20px;
+  right: 65px;
 }
 section {
   position: absolute;
@@ -170,7 +191,7 @@ section:target h1 {
 #Notification_1 i {
     position: absolute;
     left: -53px;
-    bottom: 9px;
+    bottom: 6px;
 }
 #Notification_1.show {
   visibility: visible;
@@ -218,7 +239,7 @@ section:target h1 {
   }
 }
 .checkicon i {
-  font-size: 36px;
+  font-size: 40px;
   color: white;
 }
 
@@ -250,8 +271,7 @@ section:target h1 {
 <div id="Notification_1">
   </div>
 
-
-<script type="text/javascript">
+<script>
               
  
 function ShowNotification(icon, text) {
